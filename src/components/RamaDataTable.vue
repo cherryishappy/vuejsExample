@@ -1,11 +1,90 @@
-import Vue from "vue";
-import Vuex from "vuex";
+<template>
+<v-container fluid>
+  <v-slide-y-transition mode="out-in">
 
-Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
-    todos: [
+
+    <v-layout row wrap column align-left>
+      <v-data-table
+        :headers="headers"
+        :items="desserts"
+        hide-actions
+        class="elevation-1"
+      >
+        <template slot="items" slot-scope="props">
+          <td>{{ props.item.name }}</td>
+          <td class="text-xs-right">{{ props.item.RQ_ID }}</td>
+          <td class="text-xs-right">{{ props.item.MRN }}</td>
+          <td class="text-xs-right">{{ props.item.PLACER }}</td>
+          <td class="text-xs-right">{{ props.item.SDLOC }}</td>
+          <td class="text-xs-right">{{ props.item.VALUETYPE }}</td>
+          <td class="text-xs-right">{{ props.item.PRODUCTID }}</td>
+          <td class="text-xs-right">{{ props.item.PERFORMUNIT }}</td>
+          <td class="text-xs-right">{{ props.item.CODTEST }}</td>
+          <td class="text-xs-right">{{ props.item.SHORTTEST }}</td>
+          <td class="text-xs-right">{{ props.item.LABCOMMENT }}</td>
+          <td class="text-xs-right">{{ props.item.RESULTVAL }}</td>
+          <td class="text-xs-right">{{ props.item.UNIT }}</td>
+          <td class="text-xs-right">{{ props.item.RANGE }}</td>
+          <td class="text-xs-right">{{ props.item.FLAG }}</td>
+          <td class="text-xs-right">{{ props.item.PRESTATUS }}</td>
+          <td class="text-xs-right">{{ props.item.OBSERVDATETIME }}</td>
+          <td class="text-xs-right">{{ props.item.OBSERVER }}</td>
+          <td class="text-xs-right">{{ props.item.REPORTDATETIME }}</td>
+          <td class="text-xs-right">{{ props.item.PRINTSTATUS }}</td>
+          <td class="text-xs-right">{{ props.item.HTMLRPT }}</td>
+          <td class="text-xs-right">{{ props.item.PRINTSTATUS }}</td>
+          <td class="text-xs-right">{{ props.item.STATUSCODE }}</td>
+          <td class="text-xs-right">{{ props.item.SEQ }}</td>
+
+
+
+        </template>
+      </v-data-table>
+      </v-layout>
+    </v-slide-y-transition>
+  </v-container>
+</template>
+
+
+    <script>
+
+      export default {
+        data () {
+          return {
+            headers: [
+              {
+                text: '',
+                align: 'left',
+                sortable: false,
+                value: 'name'
+              },
+              { text: 'RQ_ID', value: 'RQ_ID' },
+              { text: 'MRN', value: 'MRN' },
+              { text: 'PLACER', value: 'PLACER' },
+              { text: 'SDLOC', value: 'SDLOC' },
+              { text: 'VALUETYPE', value: 'VALUETYPE' },
+              { text: 'PRODUCTID', value: 'PRODUCTID' },
+              { text: 'PERFORMUNIT', value: 'PERFORMUNIT' },
+              { text: 'CODTEST', value: 'CODTEST' },
+              { text: 'SHORTTEST', value: 'SHORTTEST' },
+              { text: 'LABCOMMENT', value: 'LABCOMMENT' },
+              { text: 'RESULTVAL', value: 'RESULTVAL' },
+              { text: 'UNIT', value: 'UNIT' },
+              { text: 'RANGE', value: 'RANGE' },
+              { text: 'FLAG', value: 'FLAG' },
+              { text: 'PRESTATUS', value: 'PRESTATUS' },
+              { text: 'OBSERVDATETIME', value: 'OBSERVDATETIME' },
+              { text: 'OBSERVER', value: 'OBSERVER' },
+              { text: 'REPORTDATETIME', value: 'REPORTDATETIME' },
+              { text: 'PRINTSTATUS', value: 'PRINTSTATUS' },
+              { text: 'HTMLRPT', value: 'HTMLRPT' },
+              { text: 'PRINTSTATUS', value: 'PRINTSTATUS' },
+              { text: 'STATUSCODE', value: 'STATUSCODE' },
+              { text: 'SEQ', value: 'SEQ' }
+
+            ],
+            desserts: [
               {
               		"RQ_ID": "39119450",
               		"MRN": "4391010",
@@ -297,8 +376,26 @@ export default new Vuex.Store({
 
 
             ]
+          }
+        }
+      }
 
-  },
-  mutations: {},
-  actions: {}
-});
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
