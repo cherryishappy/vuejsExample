@@ -5,8 +5,7 @@ import App from "./App.vue";
 import store from "./store";
 
 
-
-
+window.Vue = Vue;
 
 import Router from 'vue-router'
 import router from './router'
@@ -22,7 +21,8 @@ Vue.use(VueGoogleCharts);
 Vue.use(VueRouter);
 
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = true;
+global.Vue = Vue
 
 
 

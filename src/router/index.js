@@ -12,9 +12,19 @@ import RamaEMR from '../components/RamaEMR.vue';
 import About from '../components/About.vue';
 import Login from '../Login.vue';
 import Page from '../Page.vue';
+import xray from '../components/X-Ray.vue';
 
 
 Vue.use(Router)
+
+var post = new Vue({
+     el:"#post",
+     data:{
+          title:'send Project',
+          message:'SSSS'
+     }
+
+});
 
 const routerOptions = [
   {

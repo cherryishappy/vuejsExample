@@ -6,6 +6,7 @@
         <div id="visit" style="display:none;"><Visit/></div>
         <div id="cyto" style="display:none;"><Cyto/></div>
         <div id="history" style="display:none;"><History/></div>
+        <div id="xray" style="display:none;"><Xray/></div>
 
  <v-bottom-nav
    :active.sync="bottomNav"
@@ -34,7 +35,7 @@
      <v-icon>image</v-icon>
    </v-btn>
 
-   <v-btn dark>
+   <v-btn dark v-on:click="clkBtnDetail('xray')">
      <span>X-Ray</span>
      <v-icon>accessibility_new</v-icon>
    </v-btn>
@@ -48,6 +49,7 @@ import Visit from './Visit'
 import Patho from './Patho'
 import Cyto from './Cyto'
 import History from './History'
+import Xray from './X-Ray'
 
 
   export default {
@@ -55,7 +57,8 @@ import History from './History'
     Visit,
     Patho,
     Cyto,
-    History
+    History,
+    Xray
 
   },
     data () {
@@ -89,19 +92,31 @@ import History from './History'
               document.getElementById('patho').style.display = "none";
               document.getElementById('cyto').style.display = "none";
               document.getElementById('history').style.display = "none";
+              document.getElementById('xray').style.display = "none";
+
          }else if (pName=="patho") {
               document.getElementById('visit').style.display = "none";
               document.getElementById('cyto').style.display = "none";
               document.getElementById('history').style.display = "none";
+              document.getElementById('xray').style.display = "none";
+
          }else if (pName=="cyto") {
               document.getElementById('visit').style.display = "none";
               document.getElementById('patho').style.display = "none";
               document.getElementById('history').style.display = "none";
+              document.getElementById('xray').style.display = "none";
+
          }else if (pName=="history") {
               document.getElementById('visit').style.display = "none";
               document.getElementById('patho').style.display = "none";
               document.getElementById('cyto').style.display = "none";
+              document.getElementById('xray').style.display = "none";
 
+         }else if (pName=="xray") {
+              document.getElementById('visit').style.display = "none";
+              document.getElementById('patho').style.display = "none";
+              document.getElementById('cyto').style.display = "none";
+              document.getElementById('history').style.display = "none";
          }
 
 

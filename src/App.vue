@@ -11,6 +11,7 @@
 import Login from './Login'
 import Page from './Page'
 
+
 export default {
   name: 'App',
   components: {
