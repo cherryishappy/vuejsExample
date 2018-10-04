@@ -7,40 +7,35 @@
 
 </template>
 <script>
-
-export default({
+export default {
   props: {
-    programName:{
-      type:String,
-      required:true
+    programName: {
+      type: String,
+      required: true
     },
-    devId:{
-      type:String,
-      default:"-"
-
+    devId: {
+      type: String,
+      default: "-"
     }
   },
-  data () {
-     return{
-       txtcallcenter:'มีข้อสงสัย - แนะนำเกี่ยวกับโปรแกรม',
-       tel :'โทร.4446 กด 3'
-     }
+  data() {
+    return {
+      txtcallcenter: "มีข้อสงสัย - แนะนำเกี่ยวกับโปรแกรม",
+      tel: "โทร.4446 กด 3"
+    };
   },
-  methods:{
-
-  }
-})
-
+  methods: {}
+};
 </script>
 <style media="screen">
-  .divCallcenter{
-    padding: 5px;
-    padding-top:15px;
-    padding-left:15px;
-    margin: 15px;
-    background-color:#e1e1ff;
-    text-align: left;
-    width: 330px;
-    color: #1e3840;
-  }
+.divCallcenter {
+  padding: 5px;
+  padding-top: 15px;
+  padding-left: 15px;
+  margin: 15px;
+  background-color: #e1e1ff;
+  text-align: left;
+  width: 330px;
+  color: #1e3840;
+}
 </style>

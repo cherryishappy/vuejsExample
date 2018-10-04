@@ -9,7 +9,7 @@
        <dropdownComment/>
 
        <callcenter programName="ViewDoc"  devId="015785"/>
-       <callcenter programName="APP"  />
+       <callcenter programName="APP" />
 
      </div>
 
@@ -18,19 +18,16 @@
 </v-layout>
 </template>
 <script>
-import textHeaderRama from './TextHeaderRama'
-import callcenter from './CallCenter'
-import dropdownComment from './DropdownComment'
+import textHeaderRama from "./TextHeaderRama";
+import callcenter from "./CallCenter";
+import dropdownComment from "./DropdownComment";
 
 export default {
-components: {
-  textHeaderRama,
-  callcenter,
-  dropdownComment
-},
-  data () {
-  }
-
-}
-
+  components: {
+    textHeaderRama,
+    callcenter,
+    dropdownComment
+  },
+  data() {}
+};
 </script>
