@@ -1,6 +1,11 @@
 <template>
   <div class="divComment1">
-     <v-checkbox label="label" v-model="value" value="value">checkbox</v-checkbox>
+     <v-select
+       :items="itemsDD"
+       label="label"
+       segmented overflow editable
+       target="#target"
+     ></v-select>
      <i class="h4level">Prop : {{commentpost}}</i>
   </div>
 
@@ -9,7 +14,9 @@
 export default {
   props: ["commentpost"],
   data() {
-    return {};
+    return {
+      itemsDD: ['A','B','C','D' ]
+    };
   },
   methods: {}
 };
